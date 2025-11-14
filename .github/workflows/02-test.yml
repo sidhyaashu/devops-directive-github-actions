@@ -12,7 +12,7 @@ jobs:
   job-2:
     runs-on: ubuntu-latest
     steps:
-      - run: "Job 2 is running"
+      - run: echo "Job 2 is running"
 
 
 
