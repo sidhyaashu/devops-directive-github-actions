@@ -1,0 +1,24 @@
+name: Test Workflow
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  say-hello-inline-bash:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from initial bash script in a Github Action workflow"
+
+  say-hell0-inline-python:
+    runs-on: ubuntu-latest
+    steps:
+      - run: print("Hi i am from python inline bash")
+        shell: python
+
+  sya-hello-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jairogomz/hello-world-javascript-action-by-jairo@v1.0.1
+        
+        with:
+            who-to-greet: 'Mona the Octocat'
